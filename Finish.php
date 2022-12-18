@@ -1,3 +1,13 @@
+<?php   
+
+
+include "action/db_connect.php";
+
+$sql="SELECT * FROM company";
+$result = mysqli_query($connect, $sql);
+// echo $tUsername;
+
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -27,7 +37,9 @@
                             <div class="d-flex justify-content-center">
                                 <div class="text-center">
                                     <h1 class="mx-auto my-0 text-uppercase">THANKYOU</h1>
+                                    
                                     <h2 class="text-white-50 mx-auto mt-2 mb-5">Get ready to pose at 360 photo booth</h2>
+                                    <a class="btn btn-primary" href="index.php">lets Rock</a>
                                 </div>
                             </div>
                             

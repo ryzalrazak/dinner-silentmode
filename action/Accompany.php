@@ -57,7 +57,7 @@ require_once 'db_connect.php';
                        
                         if ($result->num_rows > 0){
                             echo "<script>window.alert('yay thank you');
-                            window.location.href='../company.php';</script>";
+                            window.location.href='../Finish.php';</script>";
                         }
                     } 
                     else {

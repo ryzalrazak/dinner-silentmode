@@ -41,12 +41,15 @@ echo"You have pick $comp_name ";
         <div class="main">
             
             <div style="padding-top: 5cm; padding-left: 1cm; ">
-                <h2 style="text-align: center;">Which Department are you from? ...</h2>
+               
                 
                 <!-- loop sini -->
                 <?php
                 if($result->num_rows > 0 ) {
                     if($comp_name == 'Silentmode'){
+                ?>
+                <h2 style="text-align: center;">Which Department are you from? </h2>
+                <?php
                     while($row = $result->fetch_assoc()) {
                           echo "
                             
@@ -57,21 +60,26 @@ echo"You have pick $comp_name ";
                     }
                 }   
                 if($comp_name == 'Celebshare'){
-                    
+                 ?>
+                  <h2 style="text-align: center;">Who are you? </h2>  
+                <?php
                     while($row = $result2->fetch_assoc()) {
                         
                         echo "
                             
-                         <a href='action/users_attend.php?id=".$row['id']."' class='btn btn-outline-warning' role='button' style=' margin-bottom: 10px;'>".$row['name']."</a>
+                         <a href='action/Accompany.php?id=".$row['id']."' class='btn btn-outline-warning' role='button' style=' margin-bottom: 10px;'>".$row['name']."</a>
                         ";
                   }
                 }
                 else if ($comp_name == 'Terato'){
+                ?>
+                  <h2 style="text-align: center;">Who are you? </h2>  
+                <?php
                     while($row = $result3->fetch_assoc()) {
                         
                         echo "
                           
-                         <a href='action/users_attend.php?id=".$row['id']."' class='btn btn-outline-warning' role='button' style=' margin-bottom: 10px;'>".$row['name']."</a>
+                         <a href='action/Accompany.php?id=".$row['id']."' class='btn btn-outline-warning' role='button' style=' margin-bottom: 10px;'>".$row['name']."</a>
                         ";
                   }
                 }
